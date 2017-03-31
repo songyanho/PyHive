@@ -200,7 +200,10 @@ class HiveDialect(default.DefaultDialect):
 
     def get_schema_names(self, connection, **kw):
         # Equivalent to SHOW DATABASES
-        return [row.database_name for row in connection.execute('SHOW SCHEMAS')]
+        results = connection.execute('SHOW SCHEMAS')
+        for row in results:
+            continue
+        return [row.database_name for row in results]
 
     def get_view_names(self, connection, schema=None, **kw):
         # Hive does not provide functionality to query tableType
