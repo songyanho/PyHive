@@ -23,7 +23,7 @@ with open('README.rst') as readme:
 
 setup(
     name="PyHive",
-    version="0.2.1", # pyhive.__version__
+    version=pyhive.__version__,
     description="Python interface to Hive",
     long_description=long_description,
     url='https://github.com/dropbox/PyHive',
