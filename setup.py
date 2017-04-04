@@ -39,6 +39,7 @@ setup(
     ],
     install_requires=[
         'future',
+        'thrift<=0.9.3'
     ],
     extras_require={
         "Presto": ['requests>=1.0.0'],
